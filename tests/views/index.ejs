@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Promise Tests</title>
+    <link rel='stylesheet' href='/stylesheets/mocha.css' />
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <script src="/javascripts/should.js"></script>
+	  <script src="/javascripts/mocha.js"></script>
+	  <script>mocha.setup('bdd')</script>
+    <script src="/javascripts/bluebird.js"></script>
+    <script>
+
+    	global.adapter = {
+  			resolve: Promise.resolve,
+  			reject: Promise.reject,
+  			deferred: Promise.defer
+  		};
+
+    	var exports = {};
+    	var modules = {};
+    	function imp(key) {
+    		modules[key] = exports;
+    	}
+
+    	function require(key) {
+    		return modules[key];
+    	}
+    </script>
+
+    <script src="/javascripts/thenables.js"></script>
+    <script>imp('thenables');</script>
+
+    <script src="/javascripts/testThreeCases.js"></script>
+    <script>imp('testThreeCases');</script>
+
+    <script src="/javascripts/reasons.js"></script>
+    <script>imp('reasons');</script>
+
+    <script>console.log(modules);</script>
+
+	  
+	  
+	  <script src="/javascripts/specs/test.js"></script>
+
+	  <script>
+	    mocha.checkLeaks();
+	    //mocha.globals(['jQuery']);
+	    mocha.run();
+	  </script>
+  </body>
+</html>
