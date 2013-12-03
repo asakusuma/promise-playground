@@ -8,7 +8,6 @@ var rejected = adapter.rejected;
 var deferred = adapter.deferred;
 
 var dummy = { dummy: "dummy" }; // we fulfill or reject with this when we don't intend to test against it
-var sentinel = { sentinel: "sentinel" }; // a sentinel fulfillment value to test for with strict equality
 
 function testPromiseResolution(xFactory, test) {
     specify("via return from a fulfilled promise", function (done) {

@@ -10,7 +10,6 @@ var rejected = adapter.rejected;
 var deferred = adapter.deferred;
 
 var dummy = { dummy: "dummy" }; // we fulfill or reject with this when we don't intend to test against it
-var sentinel = { sentinel: "sentinel" }; // a sentinel fulfillment value to test for with strict equality
 var other = { other: "other" }; // a value we don't want to be strict equal to
 var sentinelArray = [sentinel]; // a sentinel fulfillment value to test when we need an array
 

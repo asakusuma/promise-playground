@@ -9,7 +9,7 @@ var adapter = global.adapter;
 var deferred = adapter.deferred;
 
 var dummy = { dummy: "dummy" }; // we fulfill or reject with this when we don't intend to test against it
-var sentinel = { sentinel: "sentinel" }; // a sentinel fulfillment value to test for with strict equality
+
 var other = { other: "other" }; // a value we don't want to be strict equal to
 
 describe("2.2.7: `then` must return a promise: `promise2 = promise1.then(onFulfilled, onRejected)`", function () {
