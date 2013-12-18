@@ -10,36 +10,16 @@
     <script src="/javascripts/es5-shim.js"></script>
     <script src="/javascripts/es5-sham.js"></script>
 
-    <script src="/javascripts/sinon.js"></script>
-    <script src="/javascripts/chai.js"></script>
-    <script>
-    	var assert = chai.assert;
-    </script>
-	  <script src="/javascripts/mocha.js"></script>
-	  <script>mocha.setup('bdd')</script>
+<script src="/javascripts/sinon.js"></script>
+    <script src="/javascripts/underscore.js"></script>
+    <script src="/javascripts/proclaim.js"></script>
+      <script src="/javascripts/mocha.js"></script>
+      <script>mocha.setup('bdd')</script>
     <script src="/javascripts/bluebird.js"></script>
-    <script>
+    
 
-    global.adapter = {};
+    <script src="/javascripts/program.js"></script>
 
-    	global.adapter.resolved = Promise.resolve;
-  		global.adapter.rejected = Promise.reject;
-  		global.adapter.deferred = Promise.defer;
-
-    	var exports = {};
-    	var modules = {};
-
-    	modules.assert = chai.assert;
-    	modules.sinon = sinon;
-
-    	function imp(key) {
-    		modules[key] = exports;
-    	}
-
-    	function require(key) {
-    		return modules[key];
-    	}
-    </script>
 
     <script src="/javascripts/thenables.js"></script>
     <script>imp('./helpers/thenables');</script>
@@ -50,21 +30,21 @@
     <script src="/javascripts/reasons.js"></script>
     <script>imp('./helpers/reasons');</script>
 
-	  
-	  <script src="/javascripts/specs/2.1.2.js"></script>
-	  <script src="/javascripts/specs/2.1.3.js"></script>
-	  <script src="/javascripts/specs/2.2.1.js"></script>
-	  <script src="/javascripts/specs/2.2.2.js"></script>
-	  <script src="/javascripts/specs/2.2.3.js"></script>
-	  <script src="/javascripts/specs/2.2.4.js"></script>
-	  <script src="/javascripts/specs/2.2.5.js"></script>
-	  <script src="/javascripts/specs/2.2.6.js"></script>
+      
+      <script src="/javascripts/specs/2.1.2.js"></script>
+      <script src="/javascripts/specs/2.1.3.js"></script>
+      <script src="/javascripts/specs/2.2.1.js"></script>
+      <script src="/javascripts/specs/2.2.2.js"></script>
+      <script src="/javascripts/specs/2.2.3.js"></script>
+      <script src="/javascripts/specs/2.2.4.js"></script>
+      <script src="/javascripts/specs/2.2.5.js"></script>
+      <script src="/javascripts/specs/2.2.6.js"></script>
 
-	  <script src="/javascripts/specs/2.2.7.js"></script>
-	  <script src="/javascripts/specs/2.3.1.js"></script>
-	  <script src="/javascripts/specs/2.3.2.js"></script>
-	  <script src="/javascripts/specs/2.3.3.js"></script>
-	  <script src="/javascripts/specs/2.3.4.js"></script>
+      <script src="/javascripts/specs/2.2.7.js"></script>
+      <script src="/javascripts/specs/2.3.1.js"></script>
+      <script src="/javascripts/specs/2.3.2.js"></script>
+      <script src="/javascripts/specs/2.3.3.js"></script>
+      <script src="/javascripts/specs/2.3.4.js"></script>
 
 	  <script>
 	    mocha.run();
