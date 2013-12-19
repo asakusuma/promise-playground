@@ -9,7 +9,9 @@ var rejected = adapter.rejected;
 var dummy = { dummy: "dummy" }; // we fulfill or reject with this when we don't intend to test against it
 
 describe("2.2.5 `onFulfilled` and `onRejected` must be called as functions (i.e. with no `this` value).", function () {
-    describe("strict mode", function () {
+    
+    //Can't run a strict mode test in legacy browsers
+    xdescribe("strict mode", function () {
         specify("fulfilled", function (done) {
             resolved(dummy).then(function onFulfilled() {
                 "use strict";

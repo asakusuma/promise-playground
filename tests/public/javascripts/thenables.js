@@ -25,7 +25,7 @@ exports.fulfilled = {
             }
         };
     },
-
+/*
     "a synchronously-fulfilled one-time thenable": function (value) {
         var numberOfTimesThenRetrieved = 0;
         return Object.create(null, {
@@ -42,7 +42,7 @@ exports.fulfilled = {
             }
         });
     },
-
+*/
     "a thenable that tries to fulfill twice": function (value) {
         return {
             then: function (onFulfilled) {
@@ -92,7 +92,7 @@ exports.rejected = {
             }
         };
     },
-
+/*
     "a synchronously-rejected one-time thenable": function (reason) {
         var numberOfTimesThenRetrieved = 0;
         return Object.create(null, {
@@ -109,7 +109,7 @@ exports.rejected = {
             }
         });
     },
-
+*/
     "a thenable that immediately throws in `then`": function (reason) {
         return {
             then: function () {
@@ -117,7 +117,7 @@ exports.rejected = {
             }
         };
     },
-
+/*
     "an object with a throwing `then` accessor": function (reason) {
         return Object.create(null, {
             then: {
@@ -127,7 +127,7 @@ exports.rejected = {
             }
         });
     },
-
+*/
     "an already-rejected promise": function (reason) {
         return rejected(reason);
     },
